@@ -20,9 +20,10 @@ describe('dbmodel', function() {
 			
 			var e = m.makeEntry(200).then(function (entry){
 				
-				console.log("entry created..."+ e);
+				console.log("entry created...");
 			
 				entry.findSimilarTypes(function(err, entries) {
+				
 					if (err) {
 						assert.fail();
 						end();

@@ -7,7 +7,7 @@ var ScraperModel = ScraperModel || {};
 (function (ScraperModel){
 	
 	ScraperModel.M = null;
-	
+
 
 	ScraperModel.Model = (function (){
 		
@@ -34,13 +34,13 @@ var ScraperModel = ScraperModel || {};
 						  return this.model('Entry').find({ Type: this.Type }, cb);
 						};
 						self.Entry = ScraperModel.M.model('Entry', entrySchema);
-						console.log(self.Entry);
+						
 					}
 					catch(e)
 					{
 						console.log(e);
 					}
-					console.log("model.main.connected");
+				
 					deferred.resolve();	
 					
 					
@@ -56,11 +56,10 @@ var ScraperModel = ScraperModel || {};
 			makeEntry : function(value, type)
 			{
 				
-				console.log("makeEntry");
+				
 				var deferred = Q.defer();
 				
 				var date = new Date();
-				console.log(this.Entry);
 				var entry = new this.Entry();
 				
 				entry.Type = "hourly";
@@ -72,7 +71,6 @@ var ScraperModel = ScraperModel || {};
 				entry.Value = value;
 				entry.DateTime = date;
 				
-				console.log(entry);
 				
 				entry.save(function (err){
 					if(err) deferred.reject(err);

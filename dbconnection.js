@@ -34,7 +34,7 @@ var ScraperDB = ScraperDB || {};
 				var deferred = Q.defer();	
 				
 				this.db.close(function () {
-				 	console.log("closed");
+				 	
 				  	deferred.resolve();
 				  });
 				return deferred.promise;
