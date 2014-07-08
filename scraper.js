@@ -85,7 +85,7 @@ var Scraper = Scraper || {}; ( function(Scraper) {
 
 					console.log("connected...");
 
-					var e = m.makeEntry(200).then(function(entry) {
+					var e = m.makeEntry(number).then(function(entry) {
 						console.log(entry);
 					});
 				});
