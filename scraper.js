@@ -87,6 +87,7 @@ var Scraper = Scraper || {}; ( function(Scraper) {
 
 					var e = m.makeEntry(number).then(function(entry) {
 						console.log(entry);
+						process.exit(code=0);
 					});
 				});
 			});
